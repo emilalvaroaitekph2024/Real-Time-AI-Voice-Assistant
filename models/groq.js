@@ -18,7 +18,7 @@ async function getGroqChat(text, stack) {
     const res = await groq.chat.completions.create({
         messages: stack,
         model: "llama3-70b-8192",
-        stream: false
+        stream: true
     });
     stack.push(
         {
